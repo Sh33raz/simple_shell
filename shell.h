@@ -129,6 +129,13 @@ int befree(void **);
 /* TOOLS.c */
 int int_me(me_t *);
 int dilem(char, char *);
+int _alpha_(int);
+int _atotin(char *);
+int _eratotin(char *);
+void perror(me_t *, char *);
+int dprint(int, int);
+char *convert(long int, int, int);
+void rm_cmnts(char *);
 
 /* BUILTIN.c */
 int exit_me(me_t *);
