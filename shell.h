@@ -126,6 +126,10 @@ void _fr(char **);
 void *_realloc_(void *, unsigned int, unsigned int);
 int befree(void **);
 
+/* TOOLS.c */
+int int_me(me_t *);
+int dilem(char, char *);
+
 /* BUILTIN.c */
 int exit_me(me_t *);
 int cd_me(me_t *);
@@ -157,5 +161,13 @@ int _pplate(me_t *);
 char **_environget(me_t *);
 int _unsetenv(me_t *, char *);
 int _setenv(me_t *, char *, char *);
+
+/* IO.c */
+char *historyget(me_t *h);
+int wr_history(me_t *h);
+int re_history(me_t *h);
+int history_lst(me_t *, char *, int);
+int rename_histo(me_t *h);
+
 
 #endif
