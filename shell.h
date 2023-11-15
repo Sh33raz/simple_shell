@@ -70,9 +70,9 @@ typedef struct info
 	int buf_me_type;
 	int refd;
 	int histo_count;
-} me _t;
+} me_t;
 
-#define _INFO_ \
+#define _INFO \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 	0, 0, 0}
 
@@ -127,12 +127,12 @@ void *_realloc_(void *, unsigned int, unsigned int);
 int befree(void **);
 
 /* TOOLS.c */
-int int_me(me_t *);
+int me_int(me_t *);
 int dilem(char, char *);
 int _alpha_(int);
 int _atotin(char *);
 int _eratotin(char *);
-void perror(me_t *, char *);
+void print_errs(me_t *, char *);
 int dprint(int, int);
 char *convert(long int, int, int);
 void rm_cmnts(char *);
@@ -141,17 +141,17 @@ void rm_cmnts(char *);
 int exit_me(me_t *);
 int cd_me(me_t *);
 int help_me(me_t *);
-int history_me(me_t *);
-int unset_me(me_t *, char *);
-int set_me(me_t *, char *);
-int palias(list_t *);
+int hist_me(me_t *);
+int a_unset(me_t *, char *);
+int a_set(me_t *, char *);
+int palias(list_me *);
 int alias_me(me_t *);
 
 /* GETLINE.c */
-ssize_t buff_i(me_t *, char **, size_me *);
+ssize_t buff_i(me_t *, char **, size_t *);
 ssize_t _nputget(me_t *);
-ssize_t buff_r(me_t *, char *, size_me *);
-int _lineget(my_t *, char **, size_me *);
+ssize_t buff_r(me_t *, char *, size_t *);
+int _lineget(me_t *, char **, size_t *);
 void _sigee(int);
 
 /* MY.c module */
