@@ -30,24 +30,24 @@ typedef struct str_list
 
 /**
  *struct_info - info
- *@arg: args
- *@argv: array of args
- *@pa: path
- *@argc: arg count
- *@l_count: count
- *@err_num: err
- *@l_flag: flag
- *@fname: filename
- *@_env: copy env
+ *@argu: args
+ *@arguv: array of args
+ *@pant: path
+ *@arguc: arg count
+ *@line_count: count
+ *@er_num: err
+ *@line_flag: flag
+ *@funname: filename
+ *@_envenv: copy env
  *@_environ: env
- *@history: history
- *@alias: alias
- *@env_ch: env changed
- *@status: status
- *@klam_buf: pointer
- *@klam_buf_type: ||, &&, ;
- *@readfd: fd
- *@h_count: history count
+ *@histo: history
+ *@aliaz: alias
+ *@env_cng: env changed
+ *@stats: status
+ *@buf_me: pointer
+ *@buf_me_type: ||, &&, ;
+ *@refd: fd
+ *@histo_count: history count
  */
 typedef struct info
 {
@@ -63,13 +63,13 @@ typedef struct info
 	list_me *histo;
 	list_me *aliaz;
 	char **_envrn;
-	int env_me;
-	int status;
+	int env_cng;
+	int stats;
 
 	char **buf_me;
 	int buf_me_type;
-	int readfind;
-	int me_count;
+	int refd;
+	int histo_count;
 } me _t;
 
 #define _INFO_ \
