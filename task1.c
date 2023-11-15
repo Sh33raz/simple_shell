@@ -1,11 +1,16 @@
-#include “shell.h”
+#include "shell.h"
 
 int main(void)
 {
+	char stat[1024];
+	char *argzz[1024];
+	char *tkn = strtok(stat, " ");
+	pid_t pid = fork();
+	int i = 0;
+
 	while (1)
 	{
 		printf("$ ");
-		char stat[1024];
 
 		if (fgets(stat, sizeof(stat), stdin) == NULL)
 		{
@@ -14,17 +19,12 @@ int main(void)
 		}
 		stat[strcspn(stat, "\n")] = 0;
 
-		char *argzz[1024];
-		int i = 0;
-		char *tkn = strtok(stat, " ");
-
 		while (tkn != NULL)
 		{
 			argzz[i++] = tkn;
 			tkn = strtok(NULL, " ");
 		}
 		argzz[i] = NULL;
-		pid_t pid = fork();
 
 		if (pid == 0)
 		{
