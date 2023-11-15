@@ -124,14 +124,14 @@ void fork_cmd(me_t *h)
 	child = fork();
 	if (child == -1)
 	{
-		print_errs("ERROR!!");
+		perror("ERROR!!");
 		return;
 	}
 	if (child == 0)
 	{
 		if (execve(h->pant, h->arguv, _environget(h)) == -1)
 		{
-			befree(h, 1);
+			free_me(h, 1);
 			if (errno == EACCES)
 				exit(126);
 			exit(1);
