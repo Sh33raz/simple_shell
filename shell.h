@@ -176,5 +176,17 @@ int re_history(me_t *h);
 int history_lst(me_t *, char *, int);
 int rename_histo(me_t *h);
 
+/* LIST.c */
+list_me *nodes_(list_me **, const char *, int);
+list_me *nodeends_(list_me **, const char *, int);
+size_t pliststr_(const list_me *);
+int rm_nodes_(list_me **, unsigned int);
+void _freelist_(list_me **);
+size_t l_lists(const list_me *);
+char **s_lists(list_me *);
+size_t plist(const list_me *);
+list_me *node_starts_(list_me *, char *, char);
+ssize_t nodeget(list_me *, list_me *);
+
 
 #endif
