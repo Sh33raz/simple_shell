@@ -39,7 +39,7 @@ typedef struct str_list
  *@line_flag: flag
  *@funname: filename
  *@_envenv: copy env
- *@_environ: env
+ *@_envrn: env
  *@histo: history
  *@aliaz: alias
  *@env_cng: env changed
