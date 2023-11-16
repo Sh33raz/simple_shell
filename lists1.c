@@ -87,7 +87,7 @@ list_me *node_starts_(list_me *h, char *px, char c)
 
 	while (h)
 	{
-		p = _starts(h->s, px);
+		p = _starts_(h->s, px);
 		if (p && ((c == -1) || (*p == c)))
 			return (h);
 		h = h->next;
