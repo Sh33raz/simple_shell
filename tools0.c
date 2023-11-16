@@ -73,11 +73,11 @@ int _atotin(char *s)
 }
 
 /**
- * _erratotin - converts to int
+ * _eratotin - converts to int
  * @s: string
  * Return: 0 or -1
  */
-int _erratotin(char *s)
+int _eratotin(char *s)
 {
 	int i = 0;
 	unsigned long int r = 0;

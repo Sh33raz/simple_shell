@@ -114,10 +114,10 @@ void find_words(me_t *h)
 }
 
 /**
- * fork_cmd - forks cmd
+ * fork_words - forks cmd
  * @h: struct
  */
-void fork_cmd(me_t *h)
+void fork_words(me_t *h)
 {
 	pid_t child;
 

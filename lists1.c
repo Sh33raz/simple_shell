@@ -22,7 +22,7 @@ size_t l_lists(const list_me *h)
  * @h: head
  * Return: array of strings
  */
-char **s_list(list_me *h)
+char **s_lists(list_me *h)
 {
 	list_me *node = h;
 	size_t i = l_lists(h), j;
@@ -57,7 +57,7 @@ char **s_list(list_me *h)
  * @h: head
  * Return: size
  */
-size_t p_list(const list_me *h)
+size_t plist(const list_me *h)
 {
 	size_t i = 0;
 
