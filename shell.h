@@ -134,7 +134,7 @@ int _atotin(char *);
 int _eratotin(char *);
 void print_errs(me_t *, char *);
 int dprint(int, int);
-char *convert(long int, int, int);
+char *cnvrt(long int, int, int);
 void rm_cmnts(char *);
 
 /* BUILTIN.c */
@@ -173,7 +173,7 @@ int _setenv(me_t *, char *, char *);
 char *historyget(me_t *h);
 int wr_history(me_t *h);
 int re_history(me_t *h);
-int history_lst(me_t *, char *, int);
+int histo_lst(me_t *, char *, int);
 int rename_histo(me_t *h);
 
 /* LIST.c */
@@ -188,5 +188,11 @@ size_t plist(const list_me *);
 list_me *node_starts_(list_me *, char *, char);
 ssize_t nodeget(list_me *, list_me *);
 
+/* CHAIN.c */
+int chains_(me_t *, char *, size_t *);
+void chain_checker(me_t *, char *, size_t *, size_t, size_t);
+int alias_rep(me_t *);
+int vars_rep(me_t *);
+int str_rep(char **, char *);
 
 #endif

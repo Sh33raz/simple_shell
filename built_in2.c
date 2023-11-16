@@ -88,7 +88,7 @@ int alias_me(me_t *h)
 	{
 		p = _chara_(h->arguv[i], '=');
 		if (p)
-			set_me(h, h->arguv[i]);
+			a_set(h, h->arguv[i]);
 		else
 			palias(node_starts_(h->aliaz, h->arguv[i], '='));
 	}
